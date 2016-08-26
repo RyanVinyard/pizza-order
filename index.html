@@ -9,14 +9,21 @@
   </head>
   <body>
     <div class="container">
+      <div class="jumbotron">
       <h1>Dr. Steve Brule's Pizza Parlor</h1>
+      <h2>Pick your pizza size!</h2>
+      <h3>Base prices are as follows. Small: $9 Medium: $11 Large: $13 Gargantuan: $16 All pizzas come with cheese, ya dingus!</h3>
+      <div id="pizzaSize">
       <form id="pizzaForm">
         <div class="radio">
-          <label class="radio-inline"><input type="radio" name="optradio" value="small">Small</label>
-          <label class="radio-inline"><input type="radio" name="optradio" value="medium">Medium</label>
-          <label class="radio-inline"><input type="radio" name="optradio" value="large">Large</label>
-          <label class="radio-inline"><input type="radio" name="optradio" value="gargantuan">Gargantuan</label>
+          <label class="radio-inline"><input type="radio" name="optradio" required value="small">Small</label>
+          <label class="radio-inline"><input type="radio" name="optradio" required value="medium">Medium</label>
+          <label class="radio-inline"><input type="radio" name="optradio" required value="large">Large</label>
+          <label class="radio-inline"><input type="radio" name="optradio" required value="gargantuan">Gargantuan</label>
         </div>
+      </div>
+      <h2>Pick some delicious meats for your pizza!</h2>
+      <h3>Add $1.50 to total price for all meats</h3>
       <div id="meatToppings">
         <div class="checkbox">
           <label><input type="checkbox" value="pepperoni">Pepperoni</label>
@@ -34,10 +41,28 @@
           <label><input type="checkbox" value="chicken">Chicken</label>
         </div>
       </div>
-
-    <button id="pizzaTime" type="submit" class="btn btn-success">Pizza time!</button>
+      <h2>Your pizza could use some veggies, dude.</h2>
+      <div id="veggieToppings">
+        <div class="checkbox">
+          <label><input type="checkbox" value="mushrooms">Mushrooms</label>
+        </div>
+        <div class="checkbox">
+          <label><input type="checkbox" value="peppers">Green Peppers</label>
+        </div>
+        <div class="checkbox">
+          <label><input type="checkbox" value="tomatoes">Tomato</label>
+        </div>
+        <div class="checkbox">
+          <label><input type="checkbox" value="olives">Olives</label>
+        </div>
+        <div class="checkbox">
+          <label><input type="checkbox" value="onions">Onions</label>
+        </div>
+      </div>
+    <button id="pizzaTime" type="submit" class="btn btn-success">Cowabunga Dude!</button>
       </form>
       <h3>Your pizza will cost: <span id="totalCost"></span></h3>
     </div>
+  </div>
   </body>
 </html>

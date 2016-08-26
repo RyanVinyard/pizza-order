@@ -1,3 +1,4 @@
+//Business logic
 function Pizza(size, toppings) {
   this.pizzaSize = size;
   this.pizzaToppings = toppings;
@@ -18,24 +19,24 @@ Pizza.prototype.pizzaFinalCost = function(size, toppings) {
   else if (this.pizzaSize === "gargantuan") {
     var pizzaFinalCost = pizzaFinalCost + 16;
   }
-  var toppings = $("[type='checkbox']:checked").length;
+  var toppings = $("input[type='checkbox']:checked").length;
+  if (toppings > 6) {
+    alert("Whoa there buddy, if you have that many toppings we can't make your pizza! Try scaling it back to 6 or fewer toppings.")
+    location.reload();
+  }
+  //Couldn't figure out how to count checkboxes without jQuery
   var toppings = toppings * 1.5;
   var pizzaFinalCost = pizzaFinalCost + toppings;
   return pizzaFinalCost;
-
 }
 
+//User interface logic
 $(document).ready(function() {
   $("form#pizzaForm").submit(function(event) {
     event.preventDefault();
-    var toppings = $("[type='checkbox']:checked").length;
-    var toppings = toppings * 1.5;
-    var pizzaFinalCost = pizzaFinalCost + toppings;
     var size = $("input:radio[name=optradio]:checked").val();
     var pizza = new Pizza(size);
-    console.log(size);
     totalCost = pizza.pizzaFinalCost();
-    console.log(totalCost);
     $("#totalCost").text("$" + totalCost + "!");
   });
 });

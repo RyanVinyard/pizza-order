@@ -1,18 +1,49 @@
+#meatToppings {
+  display: block;
+  margin: auto;
+  text-align: center;
+}
+
 #pizzaSize {
-  width: 230px;
-  height: auto;
+display: block;
+margin: auto;
+text-align: center;
+}
+
+#pizzaTime {
   display: block;
   margin: auto;
 }
 
-#meatToppings {
-  width: auto;
-  height: auto;
+#veggieToppings {
   display: block;
   margin: auto;
+  text-align: center;
 }
 
 h1 {
   text-align: center;
   padding: 20px;
+}
+
+h2 {
+  text-align: center;
+  padding: 20px;
+}
+
+h3 {
+  text-align: center;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.jumbotron {
+  margin: 30px;
+  padding: 10px;
+  background-color: #800000;
+  color: black;
+}
+
+body {
+  background-color: black;
 }
