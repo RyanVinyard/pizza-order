@@ -13,6 +13,18 @@ text-align: center;
 #pizzaTime {
   display: block;
   margin: auto;
+  margin-top: 20px;
+  outline: none;
+  border: none;
+  box-shadow: 0 7px #999;
+  background-color: #4CAF50;
+}
+
+#pizzaTime:active {
+  background-color: #3e8e41;
+  box-shadow: 0 2px #666;
+  transform: translateY(4px);
+
 }
 
 #veggieToppings {
@@ -37,6 +49,10 @@ h3 {
   margin-bottom: 20px;
 }
 
+h4 {
+  text-align: center;
+}
+
 .jumbotron {
   margin: 30px;
   padding: 10px;
@@ -46,4 +62,23 @@ h3 {
 
 body {
   background-color: black;
+}
+
+#sidebar-wrapper {
+  background-color: white;
+  z-index: 1000;
+  position: fixed;
+  left: 250px;
+  width: 0;
+  height: 100%;
+  margin-left: -250px;
+  overflow-y: auto;
+  background: white;
+  
+}
+
+#wrapper {
+  background-color: white;
+  padding-left: 0;
+
 }
