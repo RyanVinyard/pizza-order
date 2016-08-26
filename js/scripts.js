@@ -20,19 +20,22 @@ Pizza.prototype.pizzaFinalCost = function(size, toppings) {
   }
   var toppings = $("[type='checkbox']:checked").length;
   var toppings = toppings * 1.5;
-  
-  console.log(toppings);
+  var pizzaFinalCost = pizzaFinalCost + toppings;
   return pizzaFinalCost;
+
 }
 
 $(document).ready(function() {
   $("form#pizzaForm").submit(function(event) {
     event.preventDefault();
+    var toppings = $("[type='checkbox']:checked").length;
+    var toppings = toppings * 1.5;
+    var pizzaFinalCost = pizzaFinalCost + toppings;
     var size = $("input:radio[name=optradio]:checked").val();
     var pizza = new Pizza(size);
     console.log(size);
     totalCost = pizza.pizzaFinalCost();
     console.log(totalCost);
-    console.log(pizzaFinalCost);
+    $("#totalCost").text("$" + totalCost + "!");
   });
 });
