@@ -1,0 +1,18 @@
+#pizzaSize {
+  width: 230px;
+  height: auto;
+  display: block;
+  margin: auto;
+}
+
+#meatToppings {
+  width: auto;
+  height: auto;
+  display: block;
+  margin: auto;
+}
+
+h1 {
+  text-align: center;
+  padding: 20px;
+}
