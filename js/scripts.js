@@ -24,6 +24,7 @@ Pizza.prototype.pizzaFinalCost = function(size, toppings) {
     alert("Whoa there buddy, if you have that many toppings we can't make your pizza! Try scaling it back to 6 or fewer toppings.")
     location.reload();
   }
+    console.log(toppings);
   //Couldn't figure out how to count checkboxes without jQuery
   var toppings = toppings * 1.5;
   var pizzaFinalCost = pizzaFinalCost + toppings;
@@ -37,6 +38,7 @@ $(document).ready(function() {
     var size = $("input:radio[name=optradio]:checked").val();
     var pizza = new Pizza(size);
     totalCost = pizza.pizzaFinalCost();
+
     $("#totalCost").text("$" + totalCost + "!");
   });
 });
